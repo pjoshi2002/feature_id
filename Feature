@@ -7,6 +7,13 @@ import matplotlib.pyplot as plt
 
 fetre_val=pd.read_csv('D:/downloads/test_csv.csv')
 fetre_val.size
-fetre_val.tail()
+fetre_id=fetre_val.drop('time',axis=1)
+fetre_id.plot()
+fetre_id_mean=fetre_id.rolling(window=20).mean()
+fetre_id_mean.plot()
+feature=pd.concat([fetre_id,fetre_id.shift(1)],axis=1)
+feature.head()
+feature.columns=['Actual_id','Forecast_id']
+
 
 
