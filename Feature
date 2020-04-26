@@ -16,6 +16,8 @@ feature.head()
 feature.columns=['Actual_id','Forecast_id']
 from sklearn.metrics import mean_squared_error
 feature_test=feature [1:]
-
+feature_error=mean_squared_error(feature_test.Actual_id, feature_test.Forecast_id)
+feature_error
+np.sqrt(feature_error)
 
 
