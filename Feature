@@ -14,6 +14,8 @@ fetre_id_mean.plot()
 feature=pd.concat([fetre_id,fetre_id.shift(1)],axis=1)
 feature.head()
 feature.columns=['Actual_id','Forecast_id']
+from sklearn.metrics import mean_squared_error
+feature_test=feature [1:]
 
 
 
