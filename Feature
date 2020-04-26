@@ -1,1 +1,12 @@
 github.com/pjoshi2002/feature_id.git
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+fetre_val=pd.read_csv('D:/downloads/test_csv.csv')
+fetre_val.size
+fetre_val.tail()
+
+
